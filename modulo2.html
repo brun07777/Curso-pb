@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Módulo 2</title>
+
+    <style>
+        body {
+            background-color: rgba(15, 15, 15, 1);
+        }
+
+        h1 {
+            color: rgba(3, 224, 172, 1);
+        }
+
+        p {
+            color: white;
+            margin: 4px 0;
+        }
+
+        .exprogamas {
+            background-color: rgba(0, 0, 0);
+            color: rgba(3, 224, 172, 1);
+        }
+
+        label {
+            color: rgba(3, 224, 172, 1);
+        }
+
+        h1 {
+            font-family: "Audiowide", sans-serif;
+        }
+
+        h2 {
+            color: white
+        }
+
+        h3 {
+            color: white
+        }
+
+        button {
+            border: 2px;
+            border-radius: 16px;
+            color: white;
+            padding: 13px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            background-color: rgba(3, 224, 172, 1);
+            font-family: "Audiowide", sans-serif;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th,
+        td {
+            color: white;
+            text-align: left;
+            padding: 8px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #2a2727
+        }
+
+        th {
+            background-color: #121111;
+            color: white;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            background-color: rgba(15, 15, 15, 1);
+            padding: 20px;
+        }
+
+        pre {
+            text-align: left;
+            background-color: #2d2d2d;
+            color: #D4D4D4;
+            padding: 3px;
+            border-radius: 5px;
+            font-size: 18px;
+        }
+        code {
+            white-space: pre;
+        }
+    </style>
+</head>
+
+<body>
+    <center>
+        <h1>Módulo 2</h1>
+    </center>
+    <center>
+        <h2>Programas Básicos</h2>
+        <h3>1. Fatorial</h3>
+    </center>
+        <p>O código abaixo realiza o cálculo do fatorial de um número inserido pelo usuário. Primeiro, ele solicita que o usuário insira um número, que é armazenado na variável n. Em seguida, o valor de n é copiado para a variável a. A variável b é inicializada como 1 e será usada para acumular o resultado do fatorial. O loop for é então executado, iterando de a até 2 (exclusivo) de forma decrescente. Em cada iteração, o valor de b é multiplicado pelo valor atual de a, acumulando assim o produto dos números de n até 2. Finalmente, o código imprime o valor de b, que é o fatorial do número fornecido pelo usuário.</p>
+    <pre><code>
+    n = int(input("\nEntre com um numero para calcular seu fatorial: "))
+    a=n
+    b=1
+    for a in range (a,1,-1):
+    b *= a
+    print(f"\nO resultado eh = {b}")
+    </code></pre>
+    <center>
+        <h3>2. Fibonacci</h3>
+    </center>
+    <p>
+        Este programa gera a sequência de Fibonacci para uma quantidade de termos especificada pelo usuário. Ele começa pedindo um número n, que define quantos termos da sequência serão calculados. Os dois primeiros termos da sequência, 0 e 1, são definidos inicialmente e impressos. A seguir, o programa calcula os próximos termos usando um laço for, onde cada novo termo é a soma dos dois anteriores. Esses valores são impressos na sequência, gerando a sequência de Fibonacci até o termo n.</p>
+    <pre><code>
+    n = int(input("Entre com um número"))
+    a=0
+    b=1
+    print(f"sequencia de Fibonacci:{a} {b}", end = ' ')
+    x = n-2
+    for i in range(1,x+1):
+        c=a+b
+        print(c, end =' ')
+        a=b
+        b=c</code></pre>
+    <center>
+        <h3>3. Soldados</h3>
+    </center>
+    <p>O programa abaixo realiza a fila de soldados em que a cada fila mais um soldado é adicionada, a 1ª fila tem 1 soldado a 2ª tem 2 soldados e assim por diante. O programa permite que o usuário entre com a quantidade de soldados, e usa o while para formar as filas. No final imprimimos o número de soldados, número de filas e soldados na última fila</p>
+<pre><code>
+    fila=1
+    n = int(input("\nEntre com o numero de soldados:"))
+    sol=n
+    while sol > fila:
+    sol -= fila
+    fila += 1
+    print(f"\nO numero de soldados {n}, o numero de filas {fila},o numero de soldados na ultima fila {sol}")
+</code></pre>
+<center>
+    <h3>4. Primos</h3>
+</center>
+    <p>Este programa descobre se o número inserido pelo usuário é primo ou não. Ele descobre isso por meio do módulo dos números em um laço até chegar no número inserido pelo usuário. Se o número tiver módulo 0 apenas 2 vezes quer dizer que o número é primo, mas se ele tiver mais de 2 números ele não é primo.</p>
+<pre><code>
+    num = int(input("Entre com um valor:"))
+    cont = 0
+    for i in range (1,num+1):
+        if num%i == 0:
+            cont = cont + 1
+
+    if cont == 2:
+        print("Eh primo")
+    else:
+        print("Nao eh primo")
+    </code></pre>
+<center><h3>5. Vetores</h3></center>
+    <p>Este é um program simples que declara um vetor de acordo com o número inserido pelo usuário. O usuário também deve colocar o valor em cada posição do vetor para preenchê-lo</p>
+<pre><code>
+    n = int(input("Entre com um numero = "))
+    vetor=[]
+    for i in range(0, n+1):
+        vetor.append(int(input(f"Entre com a posiçao{i} = ")))
+    for i in range(0,n+1):
+        print(vetor[i])
+    </code></pre>
+<center><h3>6. Matrizes</h3></center>
+    <p>Este é um programa que declara uma matriz de acordo com o que o usuário inserir nas variáveis 'linhas' e 'colunas'. E depois o usuário decide o valor das posições da matriz declarada.</p>
+<pre><code>import numpy as np
+    linhas = int(input("Digite o número de linhas: "))
+    colunas = int(input("Digite o número de colunas: "))
+    matriz = np.zeros((linhas, colunas))
+    for i in range(linhas):
+        for j in range(colunas):
+            valor = int(input(f"Digite o valor para a posição [{i}][{j}]: "))
+            matriz[i, j] = valor
+    for i in range(linhas):
+        print()
+        for j in range(colunas):
+            print(f"[{matriz[i,j]}]",end=' ')
+        </code></pre>
+<center><h3>7. Criação de Arquivos</h3></center>
+    <p>Neste código o usuário pode criar um arquivo. Ele começa inserindo o nome do arquivo sem a extensão dele pois mais tarde concatenaremos o valor com o .txt o arquivo é criado tipo 'w' para o usuário poder escrever nele. Na linha seguinte o usuário escreve o que quiser dentro do arquivo e depois não podemos nos esquecer de fechá-lo</p>
+<pre><code>
+    nome = input("Escreva o nome do arquivo:")
+    arquivo = open(nome+".txt", "w")
+    valor = input("Escreva o que você quiser:")
+    arquivo.write(valor)
+    arquivo.close()
+</code></pre>
+<center><h3>8. Leitura de Arquivos</h3></center>
+    <p>Este código é muito parecido com o anterior mas a diferença é que ele utiliza a função 'r' que serve apenas para leitura. E utiliza a função arquivo.read() para ler o que está no arquivo</p>
+<pre><code>
+    nome = input("Escreva o nome do arquivo:")
+    arquivo = open(nome+".txt", "r")
+    conteudo = arquivo.read()
+    print(conteudo)
+    arquivo.close()
+</code></pre>
+<center><h3>9. Exclusão de Arquivos</h3></center>
+    <p>Este código apesar de parecer diferente é muito parecido com os anteriores mas dessa vez é utilizada a biblioteca 'os' que será responsável por deletar o arquivo. Usamos um if para verificar se o arquivo existe e se não existir ele apresenta mensagem de erro.</p>
+<pre><code>
+    import os
+    nome = input("Digite o nome do arquivo que deseja excluir: ")
+    if os.path.exists(nome+".txt"):
+        os.remove(nome+".txt")
+        print(f"O arquivo '{nome+".txt"}' foi excluído com sucesso.")
+    else:
+        print(f"O arquivo '{nome+".txt"}' não foi encontrado.")
+    </code></pre>
+</body>
+
+</html>
